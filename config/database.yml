@@ -52,6 +52,6 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  # database: studytimer_production
-  # username: studytimer
-  # password: <%= ENV['STUDYTIMER_DATABASE_PASSWORD'] %>
+  database: studytimer_production
+  username: studytimer
+  password: <%= ENV['STUDYTIMER_DATABASE_PASSWORD'] %>
