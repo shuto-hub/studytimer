@@ -1,21 +1,21 @@
 %p#notice= notice
-%h1.light-blue.lighten-4 Results
-%table.light-blue.lighten-4
-  #countDownWrap.light-blue.lighten-4
-    #countDown.light-blue.lighten-4
-    %ul.light-blue.lighten-4
+%h1.light-blue.lighten-5 サイクルタイマー（仮）
+%table.light-blue.lighten-5
+  #countDownWrap.light-blue.lighten-5
+    #countDown.light-blue.lighten-5
+    %ul.light-blue.lighten-5
       %li#startBtn
         %a.waves-effect.waves-light.btn-large
           %i.material-icons.left
-          ▶️
+          START
       %li#stopBtn
         %a.waves-effect.waves-light.btn-large
           %i.material-icons.left
-          ||
+          STOP
       %li#resetBtn
         %a.waves-effect.waves-light.btn-large
           %i.material-icons.left
-          
+          RESET
     #control
       %p
         秒数を変更する
@@ -33,8 +33,8 @@
     - @results.each do |result|
       %tr
         %td= result.day
-        %td= result.title
-        %td= result.text
+        %td= simple_format(h(result.title))
+        %td= simple_format(h(result.text))
         %td= result.score
         %td= link_to 'Show', result
         %td= link_to 'Edit', edit_result_path(result)

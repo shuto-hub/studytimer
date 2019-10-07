@@ -4,10 +4,10 @@
   = @result.day
 %p
   %strong Title:
-  = @result.title
+  = simple_format(h(@result.title))
 %p
   %strong Text:
-  = @result.text
+  = simple_format(h(@result.text))
 %p
   %strong Score:
   = @result.score
