@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Day:
+  = @result.day
+%p
+  %strong Title:
+  = @result.title
+%p
+  %strong Text:
+  = @result.text
+%p
+  %strong Score:
+  = @result.score
+= link_to 'Edit', edit_result_path(@result)
+|
+= link_to 'Back', results_path
